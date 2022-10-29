@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link rel="manifest" href="/manifest.json">
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+    <title>TOOGOTOO</title>
+</head>
+<body>
+    <div class="container hide-on-med-and-down">
+        <h1 class="hide-on-med-and-down green lighten-1 blue-text text-darken-4 left-align" style="height: 80px;">TOOGOTOO.COM</h1>
+        <nav class="nav-wrapper teal hide-on-med-and-down">
+                <ul>
+                
+                    <li><a href="index.html" class="btn purple z-depth-5">
+                        <span>HOME</span>
+                        <i class="material-icons right">home</i>
+                   </a></li>
+            
+                   <li><a href="shop.html" class="btn purple z-depth-5">
+                        <span>BUY</span>
+                        <i class="material-icons right">shop</i>
+                   </a></li>
+            
+                   <li><a href="sell.html" class="btn purple z-depth-5">
+                        <span>SELL</span>
+                        <i class="material-icons right">add</i>
+                   </a></li>
+            
+                   <li><a href="wanted.html" class="btn purple z-depth-5">
+                         <span>WANTED</span>
+                         <i class="material-icons right">bolt</i>
+                   </a></li>
+            
+                   <li><a href="addWant.html" class="btn purple z-depth-5 disabled">
+                         <span>WANT</span>
+                         <i class="material-icons right">add</i>
+                   </a></li>
+        
+                </ul>
+        </nav>
+    </div>
+    <div class="container hide-on-large-only">
+        <nav class="nav-wrapper green lighten-1">
+            <div class="container">
+                <a href="index.html" class="brand-logo">Toogotoo</a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                    <i class="material-icons">menu</i></a>
+    
+            </div>
+        </nav>
+    
+        <ul class="sidenav" id="mobile-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Buy</a></li>
+            <li><a href="sell.html">Sell</a></li>
+            <li><a href="wanted.html">Wanted</a></li>
+            <li><a href="#">-WANT-</a></li>
+    
+        </ul>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav()
+        })
+    </script>
+</body>
+</html>
