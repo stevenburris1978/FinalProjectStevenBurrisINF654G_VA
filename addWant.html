@@ -28,23 +28,23 @@
                    </a></li>
             
                    <li><a href="shop.html" class="btn purple z-depth-5">
-                        <span>BUY</span>
+                        <span>SHOP</span>
                         <i class="material-icons right">shop</i>
                    </a></li>
             
                    <li><a href="sell.html" class="btn purple z-depth-5">
                         <span>SELL</span>
-                        <i class="material-icons right">add</i>
+                        <i class="material-icons right">sell</i>
                    </a></li>
             
                    <li><a href="wanted.html" class="btn purple z-depth-5">
-                         <span>WANTED</span>
+                         <span>WISHES</span>
                          <i class="material-icons right">bolt</i>
                    </a></li>
             
                    <li><a href="addWant.html" class="btn purple z-depth-5 disabled">
-                         <span>WANT</span>
-                         <i class="material-icons right">add</i>
+                         <span>WISH</span>
+                         <i class="material-icons right">star</i>
                    </a></li>
         
                 </ul>
@@ -62,20 +62,20 @@
     
         <ul class="sidenav" id="mobile-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Buy</a></li>
+            <li><a href="shop.html">Shop</a></li>
             <li><a href="sell.html">Sell</a></li>
-            <li><a href="wanted.html">Wanted</a></li>
-            <li><a href="#">-WANT-</a></li>
+            <li><a href="wanted.html">Wishes</a></li>
+            <li><a href="#">-Wish-</a></li>
     
         </ul>
 
     </div>
     <div class="container">    
-        <h2>Wants</h2>
+        <h2>WISH</h2>
         <form id="add-want-form">
-            <input type="text" name="name" placeholder="Want Name">
-            <input type="text" name="amount" placeholder="Want Amount">
-            <button>Add WANT</button>
+            <input type="text" name="name" placeholder="Wish Name">
+            <input type="text" name="amount" placeholder="Wish Amount">
+            <button>Add WISH</button>
         </form>
         <ul id="want-list"></ul>
     </div>
@@ -160,8 +160,8 @@
         const upDoc = doc(db, "want", "sz5YJo80555yrfajfuQY");
 
         updateDoc(upDoc, {
-            name: "What is your want name? ",
-            amount: "What is your want amount?"
+            name: "What is your wish name? ",
+            amount: "What is your wish amount?"
 
         })
 
