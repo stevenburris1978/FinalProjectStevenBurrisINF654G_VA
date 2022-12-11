@@ -11,3 +11,56 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+
+const signupForm = document.querySelector("#signup-form");
+signupForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = signupForm["signup-email"].value;
+    const password = signupForm["signup-password"].value;
+    createUsersWithEmailAndPassword(auth, email, password)
+      .then((userCredentials) => {
+        const user = userCredentials.user;
+        console.log(user);
+        const modal = document.querySelector("#modal-signup");
+        M.Modal.getInstance(modal).close();
+        siqnupForm.reset();
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+             
+    });
+});
+
+const logout = document.querySelector("#logout");
+logout.addEventListener("click", (e) => {
+    e.preventDefault();
+    signout(auth)
+      .then(() => {
+        console.log("User has signed out");
+      })
+      .catch((error) => {
+
+      });
+});
+
+const loginForm = document.querySelector("#login-form");
+loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = loginForm["login-email"].value;
+    const password = loginForm["login-password"].value;
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredentials) => {
+        const user = userCredentials.user;
+        console.log(user);
+        const modal = document.querySelector("#modal-signup");
+        M.Modal.getInstance(modal).close();
+        siqnupForm.reset();
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+             
+    });
+});
+
